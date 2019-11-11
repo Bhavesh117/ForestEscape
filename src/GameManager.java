@@ -187,19 +187,21 @@ public class GameManager extends GameCore {
 
 
     public Sprite getSpriteCollision(Sprite sprite) {
-
+        Sprite sprite2 = null;
 
         Iterator i = map.getSprites();
         while (i.hasNext()) {
             Sprite otherSprite = (Sprite) i.next();
             if (isCollision(sprite, otherSprite)) {
 
-                return otherSprite;
+                sprite2 =  otherSprite;
+
+                if (otherSprite instanceof PowerUp)
+                    return otherSprite;
             }
         }
 
-
-        return null;
+        return sprite2;
     }
 
 

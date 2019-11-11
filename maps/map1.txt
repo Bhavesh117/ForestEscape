@@ -14,6 +14,6 @@
                       KIIIIIJ      IIIIIII       o     o         2
                                                   o        2
                                   2                 2EF    75556
-                 EF                                 EGD    93438
-        EF  1    CD       1           1            EGAD    94*48
+                 EF                                 EGD    94448
+        EF  1    CD                                EGAD    93*38
 BBBBBBBBGHBBBBBBBGHBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBGAAHBBBBBBBBBBB

@@ -17,7 +17,6 @@ public class ResourceManager {
     private Sprite goalSprite;
     private Sprite diamondSprite;
     private Sprite grubSprite;
-    private Sprite flySprite;
 
 
     public ResourceManager(GraphicsConfiguration gc) {
@@ -143,8 +142,6 @@ public class ResourceManager {
                     addSprite(newMap, goalSprite, x, y);
                 } else if (ch == '1') {
                     addSprite(newMap, grubSprite, x, y);
-                } else if (ch == '2') {
-                    addSprite(newMap, flySprite, x, y);
                 } else if (ch == '3') {
                     addSprite(newMap, environment.get(0), x, y);
                 } else if (ch == '4') {
@@ -242,63 +239,85 @@ public class ResourceManager {
                 loadImage("i6.png"),
                 loadImage("i7.png"),
                 loadImage("i8.png"),
-                loadImage("fly1.png"),
-                loadImage("fly2.png"),
-                loadImage("fly3.png"),
-                loadImage("grub1.png"),
-                loadImage("grub2.png"),
+                loadImage("sw1.png"),
+                loadImage("sw2.png"),
+                loadImage("sw3.png"),
+                loadImage("sw4.png"),
+                loadImage("sw5.png"),
+                loadImage("sw6.png"),
+                loadImage("sw7.png"),
+                loadImage("sw8.png"),
+        };
+
+        images[2] = new Image[]{
+                loadImage("d1.png"),
+                loadImage("d2.png"),
+                loadImage("d3.png"),
+                loadImage("d4.png"),
+                loadImage("d5.png"),
+                loadImage("d6.png"),
+                loadImage("d7.png"),
+                loadImage("d8.png"),
+                loadImage("sd1.png"),
+                loadImage("sd2.png"),
+                loadImage("sd3.png"),
+                loadImage("sd4.png"),
+                loadImage("sd5.png"),
+                loadImage("sd6.png"),
+                loadImage("sd7.png"),
+                loadImage("sd8.png"),
         };
 
         images[1] = new Image[images[0].length];
-        images[2] = new Image[images[0].length];
         images[3] = new Image[images[0].length];
         for (int i = 0; i < images[0].length; i++) {
-
             images[1][i] = getMirrorImage(images[0][i]);
+        }
 
-            images[2][i] = getFlippedImage(images[0][i]);
-
-            images[3][i] = getFlippedImage(images[1][i]);
+        for (int i = 0; i < images[2].length; i++) {
+            images[3][i] = getMirrorImage(images[2][i]);
         }
 
 
         Animation[] playerAnim = new Animation[4];
-        Animation[] flyAnim = new Animation[4];
         Animation[] grubAnim = new Animation[4];
         for (int i = 0; i < 4; i++) {
-            playerAnim[i] = createPlayerAnim(
-                    images[i][0], images[i][1], images[i][2]);
-            flyAnim[i] = createFlyAnim(
-                    images[i][3], images[i][4], images[i][5]);
-            grubAnim[i] = createGrubAnim(
-                    images[i][6], images[i][7]);
+            Animation anim = new Animation();
+            for (int x = 0; x < 8; x++) {
+                if(i < 2)
+                    anim.addFrame(images[i][x], 200);
+                else if (i == 2 || i == 3)
+                    if (x != 7)
+                        anim.addFrame(images[i][x], 100);
+                    else
+                        anim.addFrame(images[i][x], 600);
+            }
+
+            playerAnim[i] = anim;
+
+            anim = new Animation();
+
+            for (int x = 8; x < 16; x++) {
+                if(i < 2)
+                    anim.addFrame(images[i][x], 150);
+                else
+                    if (x != 15)
+                        anim.addFrame(images[i][x], 100);
+                    else
+                        anim.addFrame(images[i][x], 600);
+            }
+
+            grubAnim[i] = anim;
+
         }
 
 
         playerSprite = new Player(playerAnim[1], playerAnim[0],
-                playerAnim[2], playerAnim[3]);
-        grubSprite = new Grub(grubAnim[0], grubAnim[1],
-                grubAnim[2], grubAnim[3]);
+                playerAnim[3], playerAnim[2]);
+        grubSprite = new Skeleton(grubAnim[1], grubAnim[0],
+                grubAnim[3], grubAnim[2]);
     }
 
-
-    private Animation createPlayerAnim(Image player1,
-                                       Image player2, Image player3) {
-        Animation anim = new Animation();
-        anim.addFrame(player1, 250);
-        return anim;
-    }
-
-
-    private Animation createFlyAnim(Image img1, Image img2,
-                                    Image img3) {
-        Animation anim = new Animation();
-        anim.addFrame(img1, 50);
-        anim.addFrame(img2, 50);
-        anim.addFrame(img3, 50);
-        anim.addFrame(img2, 50);
-        return anim;
-    }
 
 
     private Animation createGrubAnim(Image img1, Image img2) {
