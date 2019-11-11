@@ -1,6 +1,6 @@
 # ForestEscape
 COMP 3609: Game Programming Assignment 3 [Platformer]
-[Github Repo](https://github.com/EmritYR/AnotherWorld
+[Github Repo](https://github.com/Bhavesh117/ForestEscape)
 
 ### Prerequisites
 
