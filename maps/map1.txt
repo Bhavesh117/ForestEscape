@@ -5,15 +5,15 @@
 #   A..Z    Tiles A through Z
 #   o       Star
 #   *       Goal
-#   1       Bad Guy 1 (grub)
-#   2       Bad Guy 2 (fly)
+#   1       Bad Guy 1 (Skeleton)
+
                                                                  
-                                                           o     o
-                                                     o      o    o
-                       o o o        o o o       o     o      o 
-                      KIIIIIJ      IIIIIII       o     o         2
-                                                  o        2
-                                  2                 2EF    75556
-                 EF                                 EGD    94448
-        EF  1    CD                                EGAD    93*38
+
+                                           KIIIIIJ   o
+                       o o o       o o1o           o
+                      KIIIIIJ     KIIIIJ         o
+                                                  o
+                                                      EF    75556
+                 EF                        EF        EGD    94448
+        EF  1    CD            1           CD       EGAD    93*38
 BBBBBBBBGHBBBBBBBGHBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBGAAHBBBBBBBBBBB

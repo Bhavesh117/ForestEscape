@@ -48,7 +48,7 @@ public class Player extends Creature {
 
 
     public float getMaxSpeed() {
-        return 0.2f;
+        return 0.3f;
     }
 
 }

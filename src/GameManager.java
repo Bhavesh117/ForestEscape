@@ -268,9 +268,7 @@ public class GameManager extends GameCore {
             }
             creature.collideHorizontal();
         }
-        if (creature instanceof Player) {
-            checkPlayerCollision((Player) creature, false);
-        }
+
 
 
         float dy = creature.getVelocityY();

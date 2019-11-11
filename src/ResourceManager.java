@@ -77,13 +77,15 @@ public class ResourceManager {
                         "maps/map" + currentMap + ".txt");
             } catch (IOException ex) {
                 if (currentMap == 1) {
-
+                    System.out.println("hi1" + currentMap);
                     return null;
                 }
+                System.out.println("hi2" + currentMap);
                 currentMap = 0;
                 map = null;
             }
         }
+        System.out.println("hi3" + currentMap);
 
         return map;
     }
