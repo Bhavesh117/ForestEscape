@@ -1,4 +1,4 @@
-# AnotherWorld
+# ForestEscape
 COMP 3609: Game Programming Assignment 3 [Platformer]
 [Github Repo](https://github.com/EmritYR/AnotherWorld
 
@@ -10,7 +10,7 @@ JAVA 1.8 or subsequent releases
 
 ### Running
 
-Import JAVA Project and run main method of the GameLauncher Class <br/><br/>
+Import JAVA Project and run main method of the GameManager Class <br/><br/>
 **_Important Notes:_** If compiling through the command line, assets folder may not be visible depending on java version and command arguments. 
 Recommended to import project in an IDE and then execute. 
 
@@ -20,7 +20,9 @@ D/Arrow_Right - Move Right <br/>
 Space - Jump <br/>
 
 ### Gameplay
-* TODO: Document Gameplay
+* Its a platformer
+* Jump on enemies to kill
+* Get to castle door to move to next level
 
 ## Built With
 
@@ -29,7 +31,7 @@ Java 1.8
 
 ## Authors
 
-* **Emrit Ramharracksingh** - *Initial work* - [EmritYR](https://github.com/EmritYR)
+* **Bhavesh Digamber** - *Initial work* - [Bhavesh117](https://github.com/Bhavesh117)
 
 ## License
 
@@ -38,4 +40,4 @@ This project is not licensed as of yet.
 ## Acknowledgments
 
 * Ms. Shareeda Mohammed for teaching on how to make a game in Java.
-* TODO: Some platformer game
+
