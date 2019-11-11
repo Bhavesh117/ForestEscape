@@ -272,8 +272,6 @@ public class ResourceManager {
 
         playerSprite = new Player(playerAnim[1], playerAnim[0],
                 playerAnim[2], playerAnim[3]);
-        flySprite = new Fly(flyAnim[0], flyAnim[1],
-                flyAnim[2], flyAnim[3]);
         grubSprite = new Grub(grubAnim[0], grubAnim[1],
                 grubAnim[2], grubAnim[3]);
     }
